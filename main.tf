@@ -20,7 +20,7 @@ resource "azurerm_resource_group" "anshu_rg" {
 }
 # Create a Storage Account
 resource "azurerm_storage_account" "anshusa" {
-  name                     = "terrafor_anshu_storage_account"
+  name                     = "anshustorage"
   resource_group_name      = azurerm_resource_group.anshu_rg.name
   location                 = azurerm_resource_group.anshu_rg.location
   account_tier             = "Standard"
@@ -38,6 +38,6 @@ resource "azurerm_storage_blob" "anshu_blob" {
   storage_container_name = "$web"
   type = "Block"
   content_type = "text/html"
-  source_content = "<h1> hellow alion, This is Naresh IT</h1>"
+  source_content = "<h1> hellow world, This is NaveenTechnology </h1>"
   
 }
